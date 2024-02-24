@@ -7,7 +7,7 @@ const Project = () => {
     {
       name: "Portfolio",
       git: "https://github.com/opurbo007/portfolio",
-      live: "www",
+      live: "https://portfolio.vercel.app/",
       imagePath: "/project1.png",
     },
     {
@@ -17,10 +17,10 @@ const Project = () => {
       imagePath: "/project2.png",
     },
     {
-      name: "Portfolio",
-      git: "https://github.com/opurbo007/portfolio",
-      live: "www",
-      imagePath: "/project1.png",
+      name: "Weather App ",
+      git: "https://github.com/opurbo007/Weather-With-VUE-JS",
+      live: "https://weather000.netlify.app/",
+      imagePath: "/project3.png",
     },
   ];
 
