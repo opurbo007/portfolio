@@ -12,7 +12,7 @@ const About = () => {
         </h2>
       </div>
       <div>
-        <div className="px-2 sm:px-20 flex flex-col sm:flex-row items-center justify-center gap-10">
+        <div className="px-4 sm:px-20 flex flex-col sm:flex-row items-center justify-center gap-10">
           <div className="">
             <Image
               src={"/me.jpg"}

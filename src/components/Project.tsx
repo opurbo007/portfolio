@@ -5,22 +5,22 @@ import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 const Project = () => {
   const projectData = [
     {
-      name: "Qoo-Media",
-      git: "github.com",
+      name: "Portfolio",
+      git: "https://github.com/opurbo007/portfolio",
       live: "www",
-      imagePath: "/logo.png",
+      imagePath: "/project1.png",
     },
     {
       name: "Qoo-Media",
-      git: "github.com",
-      live: "www",
-      imagePath: "/logo.png",
+      git: "https://github.com/opurbo007/Qoo-media",
+      live: "https://qoo-media.vercel.app/",
+      imagePath: "/project2.png",
     },
     {
-      name: "Qoo-Media",
-      git: "github.com",
+      name: "Portfolio",
+      git: "https://github.com/opurbo007/portfolio",
       live: "www",
-      imagePath: "/logo.png",
+      imagePath: "/project1.png",
     },
   ];
 
@@ -51,12 +51,20 @@ const Project = () => {
                     </CardDescription>
                   </CardHeader>
                   <div className="flex justify-between flex-row space-y-0 space-x-4 my-4 mx-2 ">
-                    <Link href={item.git}>
+                    <Link
+                      href={item.git}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <button className="w-28 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
                         GitHub
                       </button>
                     </Link>
-                    <Link href={item.live}>
+                    <Link
+                      href={item.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <button className="w-28 h-10 rounded-xl bg-white text-black border border-black  text-sm">
                         Live Demo
                       </button>
