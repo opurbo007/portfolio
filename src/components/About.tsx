@@ -5,7 +5,7 @@ import { Separator } from "./ui/separator";
 
 const About = () => {
   return (
-    <div className="h-full sm:h-[40rem]  ">
+    <div className="h-full sm:h-[40rem]">
       <div>
         <h2 className="flex items-center justify-center font-semibold text-4xl pb-16 tracking-[0.7rem]">
           ABOUT ME
@@ -13,7 +13,7 @@ const About = () => {
       </div>
       <div>
         <div className="px-4 sm:px-20 flex flex-col sm:flex-row items-center justify-center gap-10">
-          <div className="">
+          <div>
             <Image
               src={"/me.jpg"}
               height={500}
@@ -23,14 +23,16 @@ const About = () => {
             />
           </div>
           <div>
-            <div className=" flex sm:flex-row flex-col gap-4">
+            <div className="flex sm:flex-row flex-col gap-4">
               <div>
                 <Card className="w-[20rem]">
                   <CardHeader>
                     <GraduationCap />
                     <CardTitle className="pb-4">Education </CardTitle>
                     <CardDescription>
-                      B.sc. In CSE, <br /> Dhaka International University
+                      {`B.sc. In CSE,`}
+                      <br />
+                      {`Dhaka International University`}
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -41,8 +43,8 @@ const About = () => {
                     <Code2 />
                     <CardTitle>Experience </CardTitle>
                     <CardDescription>
-                      "Experienced coder ready to transition to the industry for
-                      practical application and professional growth."
+                      {`"Experienced coder ready to transition to the industry for
+                      practical application and professional growth."`}
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -52,11 +54,11 @@ const About = () => {
               <Separator />
               <div className="w-[22rem] sm:w-[45rem] px-2 py-2 border-none bg-transparent">
                 <CardDescription>
-                  "Fullstack Web Developer skilled in HTML, CSS, JavaScript,
+                  {`"Fullstack Web Developer skilled in HTML, CSS, JavaScript,
                   PHP, ReactJS, Node.js, MongoDB, MySQL, and more. Contributed
                   to diverse projects including e-commerce, blogs, and social
                   media dashboards. Eager to advance with new technologies and
-                  elevate web development career."
+                  elevate web development career."`}
                 </CardDescription>
               </div>
             </div>

@@ -25,7 +25,7 @@ export function HeroSection() {
   return (
     <div className="flex flex-col items-center justify-center h-[35rem] sm:h-[51.2rem]  ">
       <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
-        "Welcome to showcase, where innovation meets creativity."
+        {`"Welcome to showcase, where innovation meets creativity."`}
       </p>
       <span className="sm:pb-10 pb-0">
         <TypewriterEffectSmooth words={words} />

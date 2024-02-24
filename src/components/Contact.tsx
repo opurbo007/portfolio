@@ -20,7 +20,9 @@ const Contact = () => {
           />
           <Textarea
             className="w-3/4 sm:w-1/2 h-32 dark:bg-slate-50 text-wrap"
-            placeholder="I'd love to hear from you! Share your thoughts here..."
+            placeholder={
+              "I'd love to hear from you! Share your thoughts here..."
+            }
           />
           <Button>Submit</Button>
         </div>
