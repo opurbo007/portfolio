@@ -1,8 +1,10 @@
+import Contact from "@/components/Contact";
+
 const contact = () => {
   return (
-    <div className="h-screen flex justify-center items-center">
-      <div className="text-center">Still working on It</div>
-    </div>
+    <>
+      <Contact />;
+    </>
   );
 };
 

@@ -7,7 +7,7 @@ const Project = () => {
     {
       name: "Portfolio",
       git: "https://github.com/opurbo007/portfolio",
-      live: "https://portfolio.vercel.app/",
+      live: "https://portfolio-theta-hazel-45.vercel.app/",
       imagePath: "/project1.png",
     },
     {

@@ -16,8 +16,8 @@ const About = () => {
           <div>
             <Image
               src={"/me.jpg"}
-              height={500}
-              width={500}
+              height={450}
+              width={450}
               alt="Profile"
               className="border rounded-3xl"
             />
@@ -52,7 +52,7 @@ const About = () => {
             </div>
             <div className="py-4">
               <Separator />
-              <div className="w-[22rem] sm:w-[45rem] px-2 py-2 border-none bg-transparent">
+              <div className="w-[20rem] sm:w-[45rem] px-2 py-2 border-none bg-transparent">
                 <CardDescription>
                   {`"Fullstack Web Developer skilled in HTML, CSS, JavaScript,
                   PHP, ReactJS, Node.js, MongoDB, MySQL, and more. Contributed
