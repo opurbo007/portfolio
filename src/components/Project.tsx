@@ -8,19 +8,19 @@ const Project = () => {
       name: "Portfolio",
       git: "https://github.com/opurbo007/portfolio",
       live: "https://portfolio-theta-hazel-45.vercel.app/",
-      imagePath: "/project1.png",
+      imagePath: "/temp/project1.png",
     },
     {
       name: "Qoo-Media",
       git: "https://github.com/opurbo007/Qoo-media",
       live: "https://qoo-media.vercel.app/",
-      imagePath: "/project2.png",
+      imagePath: "/temp/project2.png",
     },
     {
       name: "Weather App ",
       git: "https://github.com/opurbo007/Weather-With-VUE-JS",
       live: "https://weather000.netlify.app/",
-      imagePath: "/project3.png",
+      imagePath: "/temp/project3.png",
     },
   ];
 
@@ -39,7 +39,7 @@ const Project = () => {
                 <Card className="w-[20rem]">
                   <CardHeader>
                     <CardTitle className="pb-4 text-center">
-                      {item.name}{" "}
+                      {item.name}
                     </CardTitle>
                     <CardDescription>
                       <Image

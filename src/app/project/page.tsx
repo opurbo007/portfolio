@@ -1,7 +1,9 @@
+import { ProjectPage } from "@/components/ProjectPage";
+
 const project = () => {
   return (
-    <div className="h-screen flex justify-center items-center">
-      <div className="text-center">Still working on It</div>
+    <div className="min-h-screen">
+      <ProjectPage />
     </div>
   );
 };
