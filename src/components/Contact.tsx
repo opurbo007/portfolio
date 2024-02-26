@@ -1,10 +1,10 @@
 "use client";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-
 const Contact = () => {
   const [userMessage, setUserMessage] = useState({
     email: "",
@@ -30,12 +30,13 @@ const Contact = () => {
         message: userMessage.message,
       });
 
+      toast.success("Successfully sent");
       setUserMessage({
         email: "",
         message: "",
       });
     } catch (error: any) {
-      console.log(error.message);
+      toast.error("Error sending message");
     } finally {
       setLoading(false);
     }
@@ -43,13 +44,13 @@ const Contact = () => {
   return (
     <div className="h-full sm:h-[40rem] py-8 ">
       <div>
-        <h2 className="flex items-center justify-center font-semibold text-4xl pb-16 tracking-[0.5rem]">
+        <h2 className="flex items-center justify-center font-semibold text-4xl pb-16 tracking-[0.5rem] text-center">
           CONTACT ME
         </h2>
       </div>
 
       <div>
-        <div className="flex items-center flex-col gap-6">
+        <div className="flex items-center flex-col gap-6 dark:text-slate-950">
           <Input
             type="email"
             placeholder="Enter your Email Address"
