@@ -60,15 +60,17 @@ const Project = () => {
                         GitHub
                       </button>
                     </Link>
-                    <Link
-                      href={item.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="w-28 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-                        Live Demo
-                      </button>
-                    </Link>
+                    {item.live && (
+                      <Link
+                        href={item.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="w-28 h-10 rounded-xl bg-white text-black border border-black  text-sm">
+                          Live Demo
+                        </button>
+                      </Link>
+                    )}
                   </div>
                 </Card>
               </div>
