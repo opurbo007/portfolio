@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 interface Message {
+  name: string;
   email: string;
   message: string;
   createdAt: Date;
@@ -9,6 +10,10 @@ interface Message {
 
 const userMessage = new mongoose.Schema(
   {
+    name: {
+      type: String,
+      required: [true, "Name is required"],
+    },
     email: {
       type: String,
       required: [true, "Email is required"],

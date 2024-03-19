@@ -7,6 +7,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 const Contact = () => {
   const [userMessage, setUserMessage] = useState({
+    name: "",
     email: "",
     message: "",
   });
@@ -26,12 +27,14 @@ const Contact = () => {
     try {
       setLoading(true);
       const res = await axios.post("/api/contact", {
+        name: userMessage.name,
         email: userMessage.email,
         message: userMessage.message,
       });
 
       toast.success("Successfully sent");
       setUserMessage({
+        name: "",
         email: "",
         message: "",
       });
@@ -52,6 +55,15 @@ const Contact = () => {
       <div>
         <div className="flex items-center flex-col gap-6 dark:text-slate-950">
           <Input
+            type="text"
+            placeholder="Enter your Name"
+            className="w-3/4 sm:w-1/2 dark:bg-slate-50"
+            value={userMessage.name}
+            onChange={(e) =>
+              setUserMessage({ ...userMessage, name: e.target.value })
+            }
+          />
+          <Input
             type="email"
             placeholder="Enter your Email Address"
             className="w-3/4 sm:w-1/2 dark:bg-slate-50"
@@ -70,8 +82,8 @@ const Contact = () => {
               setUserMessage({ ...userMessage, message: e.target.value })
             }
           />
-          <Button onClick={msgSend} disabled={disable}>
-            {disable ? "Write Message" : "Submit"}
+          <Button onClick={msgSend} disabled={disable || loading}>
+            {loading ? "Sending" : disable ? "Write Message" : "Submit"}
           </Button>
         </div>
       </div>
