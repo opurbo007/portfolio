@@ -1,29 +1,17 @@
 import Image from "next/image";
+import React from "react";
 import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
-const Project = () => {
-  const projectData = [
-    {
-      name: "Portfolio",
-      git: "https://github.com/opurbo007/portfolio",
-      live: "https://portfolio-theta-hazel-45.vercel.app/",
-      imagePath: "/temp/project1.png",
-    },
-    {
-      name: "Qoo-Media",
-      git: "https://github.com/opurbo007/Qoo-media",
-      live: "https://qoo-media.vercel.app/",
-      imagePath: "/temp/project2.png",
-    },
-    {
-      name: "Weather App ",
-      git: "https://github.com/opurbo007/Weather-With-VUE-JS",
-      live: "https://weather000.netlify.app/",
-      imagePath: "/temp/project3.png",
-    },
-  ];
+interface ProjectType {
+  _id: number;
+  name: string;
+  git: string;
+  live?: string;
+  imagePath: string;
+}
 
+const Project: React.FC<{ projectData: ProjectType[] }> = ({ projectData }) => {
   return (
     <section className="h-full sm:h-[40rem] py-8">
       <div>
@@ -31,10 +19,10 @@ const Project = () => {
           PROJECTS
         </h2>
       </div>
-      <div className=" flex items-center justify-center sm:flex-row flex-col gap-4">
+      <div className="flex items-center justify-center sm:flex-row flex-col gap-4">
         <div>
-          <div className=" flex sm:flex-row flex-col gap-4 sm:gap-16">
-            {projectData.map((item, idx) => (
+          <div className="flex sm:flex-row flex-col gap-4 sm:gap-16">
+            {projectData?.map((item, idx) => (
               <div key={idx}>
                 <Card className="w-[20rem]">
                   <CardHeader>
