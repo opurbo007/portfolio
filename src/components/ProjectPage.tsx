@@ -59,20 +59,28 @@ const project = [
   },
   {
     _id: "8",
+    name: "EventX",
+    description: "React.js Tailwind",
+    git: "https://github.com/opurbo007/eventx",
+    live: "https://eventx-zeta.vercel.app/",
+    imagePath: "/temp/project14.png",
+  },
+  {
+    _id: "9",
     name: "Haven Store",
     description: "Next.js TypeScript Sanity Stripe Shandcn UI Tailwind",
     git: "https://github.com/opurbo007/havenstore",
     imagePath: "/temp/project6.png",
   },
   {
-    _id: "9",
+    _id: "10",
     name: "Routine Managment System",
     description: "HTML Tailwind PHP MySQL JS PHPMailer domPdf",
     git: "https://github.com/opurbo007/Routine",
     imagePath: "/temp/project5.png",
   },
   {
-    _id: "10",
+    _id: "11",
     name: "Weather App",
     description: "Vue.js Open-Weather-Api Html CSS",
     git: "https://github.com/opurbo007/Weather-With-VUE-JS",
@@ -80,7 +88,7 @@ const project = [
     imagePath: "/temp/project3.png",
   },
   {
-    _id: "11",
+    _id: "12",
     name: "Qoo-Media",
     description: "React.js RapidApi Material UI",
     git: "https://github.com/opurbo007/Qoo-media/",
@@ -88,7 +96,7 @@ const project = [
     imagePath: "/temp/project2.png",
   },
   {
-    _id: "12",
+    _id: "13",
     name: "portfolio",
     description: "NEXT.js MongoDB Shadcn UI Acerternity UI",
     git: "https://github.com/opurbo007/portfolio",
@@ -96,7 +104,7 @@ const project = [
     imagePath: "/temp/project1.png",
   },
   {
-    _id: "13",
+    _id: "14",
     name: "ShowBox",
     description: "React.js Redux-toolkit TMBDApi SCSS",
     git: "https://github.com/opurbo007/showbox",
