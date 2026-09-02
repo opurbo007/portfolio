@@ -32,7 +32,7 @@ const Footer = () => {
           <Separator className="w-3/4 mx-auto" />
           <div className="text-center">
             <h4 className="text-sm font-medium leading-none flex justify-center items-center">
-              <Copyright /> All Rights Reserved to Opu Pal - 2026
+              <Copyright /> All Rights Reserved to Opu Pal - {new Date().getFullYear()}
             </h4>
           </div>
         </div>
