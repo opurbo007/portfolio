@@ -1,18 +1,11 @@
-import { Briefcase, Code2, GraduationCap, MapPin, Mail } from "lucide-react";
+import { Briefcase, GraduationCap, MapPin, Mail } from "lucide-react";
 import Image from "next/image";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Separator } from "./ui/separator";
-
-const responsibilities = [
-  "Developing and maintaining full-stack web apps with Next.js, React, and Node.js",
-  "Building RESTful APIs and integrating third-party services",
-  "Working with MongoDB and PostgreSQL databases",
-  "Implementing responsive UI designs with Tailwind CSS",
-  "Collaborating with team members on client projects",
-  "Deploying and managing applications on Vercel and cloud platforms",
-];
+import { getExperienceDuration } from "@/utils/experience";
 
 const About = () => {
+  const duration = getExperienceDuration();
   return (
     <div className="h-full py-8">
       <div>
@@ -25,10 +18,10 @@ const About = () => {
           <div>
             <Image
               src={"/avatar.jpg"}
-              height={450}
-              width={450}
+              height={300}
+              width={300}
               alt="Profile"
-              className="border rounded-3xl object-cover"
+              className="border rounded-3xl object-cover h-64 w-64 sm:h-72 sm:w-72"
             />
           </div>
           <div>
@@ -68,7 +61,11 @@ const About = () => {
               <Separator />
               <div className="w-[20rem] sm:w-[45rem] px-2 py-2 border-none bg-transparent">
                 <CardDescription>
-                  {`A passionate full-stack web developer based in Nottingham, UK, specializing in the MERN stack, Next.js, and modern web technologies. I love building practical, user-friendly applications — from e-commerce and dashboards to AI-powered tools and PWAs.`}
+                  {`A passionate full-stack web developer based in Nottingham, UK, specializing in the MERN stack, Next.js, and modern web technologies. I love building practical, user-friendly applications — from e-commerce and dashboards to AI-powered tools and PWAs. I have been working professionally for `}
+                  <span className="font-semibold text-black dark:text-white">
+                    {duration}
+                  </span>
+                  {` and counting.`}
                 </CardDescription>
               </div>
             </div>
@@ -81,19 +78,6 @@ const About = () => {
                 <Mail className="h-3.5 w-3.5" />
                 opu.pal.dev@gmail.com
               </a>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-sm font-semibold tracking-wider mb-3 px-2">
-                WORK EXPERIENCE HIGHLIGHTS
-              </h3>
-              <ul className="text-xs text-neutral-700 dark:text-neutral-300 space-y-2 px-2 max-w-[45rem]">
-                {responsibilities.map((r, i) => (
-                  <li key={i} className="flex gap-2">
-                    <Code2 className="h-3.5 w-3.5 mt-0.5 shrink-0" />
-                    <span>{r}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
