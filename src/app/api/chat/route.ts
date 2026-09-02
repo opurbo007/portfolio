@@ -27,7 +27,7 @@ async function callGroq(
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
+        model: "qwen/qwen3.8-27b",
         messages,
         temperature: 0.7,
         max_tokens: 600,
@@ -91,11 +91,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ reply });
   } catch (error) {
     console.error("Chat API error:", error);
+    const details = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
       {
-        error:
-          "Could not reach AI service. Please wait a moment and try again.",
-        details: error instanceof Error ? error.message : "Unknown error",
+        error: details,
+        details,
       },
       { status: 502 },
     );
