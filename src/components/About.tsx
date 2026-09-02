@@ -50,7 +50,7 @@ const About = () => {
                       {`Techy's World Ltd · May 2024 - Present`}
                       <br />
                       <span className="text-neutral-500 dark:text-neutral-400">
-                        Nottingham, UK
+                        62 High St., Long Eaton, Nottingham, NG10 1LP, UK
                       </span>
                     </CardDescription>
                   </CardHeader>

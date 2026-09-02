@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between items-center top-0 left-0 w-full sm:pt-6 sm:px-32">
         <div>
           <a href="#home" onClick={(e) => handleScroll(e, "#home")}>
-            <Image src={"/opurbo.jpg"} alt={"logo"} width={200} height={80} />
+            <Image src={"/opu.jpg"} alt={"logo"} width={200} height={80} />
           </a>
         </div>
         <div className="flex items-center justify-end space-x-4">
@@ -71,7 +71,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center top-0 left-0 w-full p-2 md:invisible">
         <div>
           <a href="#home" onClick={(e) => handleScroll(e, "#home")}>
-            <Image src={"/opurbo.jpg"} alt={"logo"} width={100} height={80} />
+            <Image src={"/opu.jpg"} alt={"logo"} width={100} height={80} />
           </a>
         </div>
         <Sheet>
