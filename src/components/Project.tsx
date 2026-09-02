@@ -13,6 +13,7 @@ interface ProjectType {
   live?: string;
   imagePath: string;
   description?: string;
+  isPrivate?: boolean;
 }
 
 const allProjects: ProjectType[] = [
@@ -20,25 +21,28 @@ const allProjects: ProjectType[] = [
     _id: 1,
     name: "Techys Retail & IT",
     description: "Next.js Tailwind TypeScript",
-    git: "https://github.com/opurbo007",
+    git: "",
     live: "https://www.mytechys.co.uk/retail",
     imagePath: "/temp/project25.png",
+    isPrivate: true,
   },
   {
     _id: 2,
     name: "Wheelline",
     description: "Next.js Tailwind TypeScript",
-    git: "https://github.com/opurbo007",
+    git: "",
     live: "https://www.wheelline.co.uk/",
     imagePath: "/temp/project24.png",
+    isPrivate: true,
   },
   {
     _id: 3,
     name: "Okra Derby",
     description: "Next.js Tailwind TypeScript",
-    git: "https://github.com/opurbo007",
+    git: "",
     live: "https://okracfw.mytechys.co.uk/",
     imagePath: "/temp/project23.png",
+    isPrivate: true,
   },
   {
     _id: 4,
@@ -248,7 +252,7 @@ const Project: React.FC = () => {
                   </CardDescription>
                 </CardHeader>
                 <div className="flex items-center justify-between gap-2 px-5 pb-5 pt-2 mt-auto">
-                  {item.git && (
+                  {item.git && !item.isPrivate ? (
                     <Link
                       href={item.git}
                       target="_blank"
@@ -258,6 +262,10 @@ const Project: React.FC = () => {
                       <Github className="h-3.5 w-3.5" />
                       Code
                     </Link>
+                  ) : (
+                    <span className="inline-flex items-center justify-center flex-1 px-3 py-2 text-xs font-medium rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 text-neutral-500 dark:text-neutral-400 cursor-not-allowed">
+                      Private
+                    </span>
                   )}
                   {item.live ? (
                     <Link
