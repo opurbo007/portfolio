@@ -43,8 +43,7 @@ const About = () => {
                     <Code2 />
                     <CardTitle>Experience </CardTitle>
                     <CardDescription>
-                      {`"Experienced coder ready to transition to the industry for
-                      practical application and professional growth."`}
+                      {`Full-Stack Developer at Tachy's since May 2024, building and maintaining production web applications with Next.js, React, Node.js, MongoDB, and PostgreSQL.`}
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -54,11 +53,7 @@ const About = () => {
               <Separator />
               <div className="w-[20rem] sm:w-[45rem] px-2 py-2 border-none bg-transparent">
                 <CardDescription>
-                  {`"Fullstack Web Developer skilled in HTML, CSS, JavaScript,
-                  PHP, ReactJS, Node.js, MongoDB, MySQL, and more. Contributed
-                  to diverse projects including e-commerce, blogs, and social
-                  media dashboards. Eager to advance with new technologies and
-                  elevate web development career."`}
+                  {`A passionate full-stack web developer based in Nottingham, UK, specializing in the MERN stack, Next.js, and modern web technologies. I love building practical, user-friendly applications — from e-commerce and dashboards to AI-powered tools and PWAs.`}
                 </CardDescription>
               </div>
             </div>

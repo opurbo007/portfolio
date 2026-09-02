@@ -1,8 +1,16 @@
 "use client";
 import { Github, Linkedin } from "lucide-react";
-import Link from "next/link";
 import { Toggle } from "./ui/toggle";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+
+const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+  e.preventDefault();
+  const el = document.querySelector(target);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
 export function HeroSection() {
   const words = [
     {
@@ -31,19 +39,19 @@ export function HeroSection() {
         <TypewriterEffectSmooth words={words} />
       </span>
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 my-4">
-        <Link href={"/opuPal.pdf"}>
+        <a href={"/opuPal.pdf"} target="_blank" rel="noopener noreferrer">
           <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
             Resume
           </button>
-        </Link>
-        <Link href={"/contact"}>
+        </a>
+        <a href="#contact" onClick={(e) => handleScroll(e, "#contact")}>
           <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
             Contact
           </button>
-        </Link>
+        </a>
       </div>
       <div className="flex gap-6 py-2">
-        <Link
+        <a
           href={"https://github.com/opurbo007"}
           target="_blank"
           rel="noopener noreferrer"
@@ -51,16 +59,16 @@ export function HeroSection() {
           <Toggle className="border border-black dark:border-white rounded-full bg-white text-black hover:bg-black hover:text-white ">
             <Github />
           </Toggle>
-        </Link>
-        <Link
-          href={"https://www.linkedin.com/in/opu-pal-9b72a52b0/"}
+        </a>
+        <a
+          href={"https://www.linkedin.com/in/opu-pal/"}
           target="_blank"
           rel="noopener noreferrer"
         >
           <Toggle className="border border-black dark:border-white rounded-full bg-black text-white hover:bg-white hover:text-black ">
             <Linkedin />
           </Toggle>
-        </Link>
+        </a>
       </div>
     </div>
   );
