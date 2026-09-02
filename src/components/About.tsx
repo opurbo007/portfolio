@@ -1,11 +1,20 @@
-import { Code2, GraduationCap } from "lucide-react";
+import { Briefcase, Code2, GraduationCap, MapPin, Mail } from "lucide-react";
 import Image from "next/image";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Separator } from "./ui/separator";
 
+const responsibilities = [
+  "Developing and maintaining full-stack web apps with Next.js, React, and Node.js",
+  "Building RESTful APIs and integrating third-party services",
+  "Working with MongoDB and PostgreSQL databases",
+  "Implementing responsive UI designs with Tailwind CSS",
+  "Collaborating with team members on client projects",
+  "Deploying and managing applications on Vercel and cloud platforms",
+];
+
 const About = () => {
   return (
-    <div className="h-full sm:h-[40rem]">
+    <div className="h-full py-8">
       <div>
         <h2 className="flex items-center justify-center font-semibold text-4xl pb-16 tracking-[0.7rem]">
           ABOUT ME
@@ -40,10 +49,16 @@ const About = () => {
               <div>
                 <Card className="w-[20rem] ">
                   <CardHeader>
-                    <Code2 />
+                    <Briefcase />
                     <CardTitle>Experience </CardTitle>
                     <CardDescription>
-                      {`Full-Stack Developer at Tachy's since May 2024, building and maintaining production web applications with Next.js, React, Node.js, MongoDB, and PostgreSQL.`}
+                      <span className="font-semibold">Full-Stack Developer</span>
+                      <br />
+                      {`Tachy's · May 2024 - Present`}
+                      <br />
+                      <span className="text-neutral-500 dark:text-neutral-400">
+                        Nottingham, UK
+                      </span>
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -56,6 +71,29 @@ const About = () => {
                   {`A passionate full-stack web developer based in Nottingham, UK, specializing in the MERN stack, Next.js, and modern web technologies. I love building practical, user-friendly applications — from e-commerce and dashboards to AI-powered tools and PWAs.`}
                 </CardDescription>
               </div>
+            </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-neutral-600 dark:text-neutral-300 px-2">
+              <span className="inline-flex items-center gap-1.5">
+                <MapPin className="h-3.5 w-3.5" />
+                Nottingham, UK
+              </span>
+              <a href="mailto:opu.pal.dev@gmail.com" className="inline-flex items-center gap-1.5 hover:underline">
+                <Mail className="h-3.5 w-3.5" />
+                opu.pal.dev@gmail.com
+              </a>
+            </div>
+            <div className="mt-6">
+              <h3 className="text-sm font-semibold tracking-wider mb-3 px-2">
+                WORK EXPERIENCE HIGHLIGHTS
+              </h3>
+              <ul className="text-xs text-neutral-700 dark:text-neutral-300 space-y-2 px-2 max-w-[45rem]">
+                {responsibilities.map((r, i) => (
+                  <li key={i} className="flex gap-2">
+                    <Code2 className="h-3.5 w-3.5 mt-0.5 shrink-0" />
+                    <span>{r}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
