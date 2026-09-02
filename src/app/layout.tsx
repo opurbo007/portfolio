@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import AnimatedFavicon from "@/components/AnimatedFav";
 import BackToTop from "@/components/BackToTop";
+import ChatBot from "@/components/ChatBot";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -121,6 +122,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         <BackToTop />
+        <ChatBot />
       </body>
     </html>
   );
