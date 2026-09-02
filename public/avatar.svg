@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="100" fill="#122436"/>
+  <circle cx="100" cy="80" r="35" fill="#5eead4" opacity="0.25"/>
+  <ellipse cx="100" cy="160" rx="50" ry="35" fill="#5eead4" opacity="0.15"/>
+  <text x="100" y="90" textAnchor="middle" fill="#5eead4" fontSize="28" fontWeight="bold" opacity="0.6">OP</text>
+</svg>
