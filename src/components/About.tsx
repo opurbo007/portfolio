@@ -14,7 +14,7 @@ const About = () => {
         </h2>
       </div>
       <div>
-        <div className="px-4 sm:px-20 flex flex-col sm:flex-row items-center justify-center gap-10">
+        <div className="px-4 sm:px-20 flex flex-col sm:flex-row items-start justify-center gap-10">
           <div>
             <Image
               src={"/avatar.jpg"}
@@ -25,29 +25,19 @@ const About = () => {
             />
           </div>
           <div>
-            <div className="flex sm:flex-row flex-col gap-4">
-              <div>
-                <Card className="w-[20rem]">
-                  <CardHeader>
-                    <GraduationCap />
-                    <CardTitle className="pb-4">Education </CardTitle>
-                    <CardDescription>
-                      {`B.sc. In CSE,`}
-                      <br />
-                      {`Dhaka International University`}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              </div>
-              <div>
-                <Card className="w-[20rem] ">
-                  <CardHeader>
-                    <Briefcase />
-                    <CardTitle>Experience </CardTitle>
-                    <CardDescription>
+            <div className="flex sm:flex-row flex-col gap-4 items-stretch">
+              <div className="space-y-2">
+                <Card className="w-[20rem] h-full">
+                  <CardHeader className="space-y-3">
+                    <Briefcase className="h-6 w-6" />
+                    <CardTitle className="pb-1">Experience</CardTitle>
+                    <CardDescription className="leading-relaxed space-y-1">
                       <span className="font-semibold">Full-Stack Developer</span>
                       <br />
-                      {`Techy's World Ltd · May 2024 - Present`}
+                      <span className="font-semibold text-black dark:text-white">
+                        {`Techy's World Ltd`}
+                      </span>
+                      {` · May 2024 - Present`}
                       <br />
                       <span className="text-neutral-500 dark:text-neutral-400">
                         62 High St., Long Eaton, Nottingham, NG10 1LP, UK
@@ -56,11 +46,24 @@ const About = () => {
                   </CardHeader>
                 </Card>
               </div>
+              <div className="space-y-2">
+                <Card className="w-[20rem] h-full">
+                  <CardHeader className="space-y-3">
+                    <GraduationCap className="h-6 w-6" />
+                    <CardTitle className="pb-1">Education</CardTitle>
+                    <CardDescription className="leading-relaxed space-y-1">
+                      {`B.sc. In CSE`}
+                      <br />
+                      {`Dhaka International University`}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </div>
             </div>
             <div className="py-4">
               <Separator />
               <div className="w-[20rem] sm:w-[45rem] px-2 py-2 border-none bg-transparent">
-                <CardDescription>
+                <CardDescription className="leading-relaxed">
                   {`A passionate full-stack web developer based in Nottingham, UK, specializing in the MERN stack, Next.js, and modern web technologies. I love building practical, user-friendly applications — from e-commerce and dashboards to AI-powered tools and PWAs. I have been working professionally for `}
                   <span className="font-semibold text-black dark:text-white">
                     {duration}

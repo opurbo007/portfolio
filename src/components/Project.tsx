@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
+import { Github } from "lucide-react";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 interface ProjectType {
@@ -205,67 +206,83 @@ const Project: React.FC = () => {
   const projects = showAll ? allProjects : allProjects.slice(0, INITIAL_COUNT);
 
   return (
-    <section className="h-full py-8">
+    <section className="h-full py-12">
       <div>
-        <h2 className="flex items-center justify-center font-semibold text-4xl pb-16 tracking-[0.7rem]">
+        <h2 className="flex items-center justify-center font-semibold text-4xl pb-12 tracking-[0.7rem]">
           PROJECTS
         </h2>
       </div>
       <div className="flex items-center justify-center px-4">
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-16 max-w-6xl">
-          {projects.map((item) => (
-            <div key={item._id}>
-              <Card className="w-[20rem]">
-                <CardHeader>
-                  <CardTitle className="pb-4 text-center">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full">
+          {projects.map((item) => {
+            const tags = item.description?.split(" ") ?? [];
+            return (
+              <Card
+                key={item._id}
+                className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="relative w-full aspect-video bg-neutral-100 dark:bg-neutral-900">
+                  <Image
+                    src={item.imagePath}
+                    alt={item.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <CardHeader className="space-y-3 p-5 flex-1">
+                  <CardTitle className="text-lg font-semibold leading-tight">
                     {item.name}
                   </CardTitle>
                   <CardDescription>
-                    <Image
-                      src={item.imagePath}
-                      alt={item.name}
-                      height={250}
-                      width={250}
-                      className="rounded-md mx-auto"
-                    />
+                    <div className="flex flex-wrap gap-1.5">
+                      {tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </CardDescription>
-                  {item.description && (
-                    <p className="text-xs text-center text-neutral-500 dark:text-neutral-400 pt-2">
-                      {item.description}
-                    </p>
-                  )}
                 </CardHeader>
-                <div className="flex justify-end gap-3 my-4 mx-2">
+                <div className="flex items-center justify-between gap-2 px-5 pb-5 pt-2 mt-auto">
                   {item.git && (
                     <Link
                       href={item.git}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition"
+                      className="inline-flex items-center justify-center gap-1.5 flex-1 px-3 py-2 text-xs font-medium rounded-md bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition"
                     >
-                      Git
+                      <Github className="h-3.5 w-3.5" />
+                      Code
                     </Link>
                   )}
-                  {item.live && (
+                  {item.live ? (
                     <Link
                       href={item.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-black dark:border-white bg-white text-black dark:bg-black dark:text-white hover:opacity-80 transition"
+                      className="inline-flex items-center justify-center gap-1.5 flex-1 px-3 py-2 text-xs font-medium rounded-md border border-black dark:border-white bg-white text-black dark:bg-black dark:text-white hover:opacity-80 transition"
                     >
                       Live
                     </Link>
+                  ) : (
+                    <span className="inline-flex items-center justify-center flex-1 px-3 py-2 text-xs font-medium rounded-md border border-dashed border-neutral-400 text-neutral-400">
+                      No Demo
+                    </span>
                   )}
                 </div>
               </Card>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
       <div className="flex items-center justify-center pt-12">
         <button
           onClick={() => setShowAll(!showAll)}
-          className="inline-flex items-center px-5 py-2 text-sm font-medium rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition"
+          className="inline-flex items-center px-6 py-2.5 text-sm font-medium rounded-full border border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition"
         >
           {showAll ? "Show Less" : "Show More"}
         </button>
