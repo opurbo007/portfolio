@@ -24,11 +24,11 @@ const About = () => {
         <div className="px-4 sm:px-20 flex flex-col sm:flex-row items-center justify-center gap-10">
           <div>
             <Image
-              src={"/me.jpg"}
+              src={"/avatar.jpg"}
               height={450}
               width={450}
               alt="Profile"
-              className="border rounded-3xl"
+              className="border rounded-3xl object-cover"
             />
           </div>
           <div>
@@ -54,7 +54,7 @@ const About = () => {
                     <CardDescription>
                       <span className="font-semibold">Full-Stack Developer</span>
                       <br />
-                      {`Tachy's · May 2024 - Present`}
+                      {`Techy's World Ltd · May 2024 - Present`}
                       <br />
                       <span className="text-neutral-500 dark:text-neutral-400">
                         Nottingham, UK

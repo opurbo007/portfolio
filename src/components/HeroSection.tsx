@@ -40,7 +40,7 @@ export function HeroSection() {
       </span>
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-900 text-xs sm:text-sm my-3">
         <Briefcase className="h-3.5 w-3.5" />
-        <span>Full-Stack Developer at <strong>Tachy's</strong> · May 2024 - Present</span>
+        <span>Full-Stack Developer at <strong>Techy's World Ltd</strong> · May 2024 - Present</span>
       </div>
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 my-4">
         <a href={"/opu_pal_cv.pdf"} target="_blank" rel="noopener noreferrer">
