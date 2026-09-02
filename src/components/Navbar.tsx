@@ -1,6 +1,7 @@
+"use client";
+
 import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 import Image from "next/image";
-import Link from "next/link";
 import { ModeToggle } from "../provider/mode-toggle";
 import {
   Sheet,
@@ -11,42 +12,55 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 
+const menu = [
+  {
+    title: "Home",
+    target: "#home",
+  },
+  {
+    title: "About",
+    target: "#about",
+  },
+  {
+    title: "Projects",
+    target: "#projects",
+  },
+  {
+    title: "Skills",
+    target: "#skills",
+  },
+  {
+    title: "Contact",
+    target: "#contact",
+  },
+];
+
 const Navbar = () => {
-  const menu = [
-    {
-      title: "Home",
-      path: "/",
-    },
-    {
-      title: "About",
-      path: "/about",
-    },
-    {
-      title: "Projects",
-      path: "/project",
-    },
-    {
-      title: "Contact",
-      path: "/contact",
-    },
-  ];
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    e.preventDefault();
+    const el = document.querySelector(target);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
       <div className="hidden md:flex justify-between items-center top-0 left-0 w-full sm:pt-6 sm:px-32">
         <div>
-          <Link href={"/"}>
+          <a href="#home" onClick={(e) => handleScroll(e, "#home")}>
             <Image src={"/opurbo.jpg"} alt={"logo"} width={200} height={80} />
-          </Link>
+          </a>
         </div>
         <div className="flex items-center justify-end space-x-4">
           <Menubar className=" ">
             {menu.map((item, idx) => (
               <MenubarMenu key={idx}>
-                <Link href={item.path}>
+                <a href={item.target} onClick={(e) => handleScroll(e, item.target)}>
                   <MenubarTrigger className="text-lg">
                     {item.title}
                   </MenubarTrigger>
-                </Link>
+                </a>
               </MenubarMenu>
             ))}
           </Menubar>
@@ -56,9 +70,9 @@ const Navbar = () => {
       </div>
       <div className="flex justify-between items-center top-0 left-0 w-full p-2 md:invisible">
         <div>
-          <Link href={"/"}>
+          <a href="#home" onClick={(e) => handleScroll(e, "#home")}>
             <Image src={"/opurbo.jpg"} alt={"logo"} width={100} height={80} />
-          </Link>
+          </a>
         </div>
         <Sheet>
           <SheetTrigger className="absolute top-0 right-0 ">
@@ -80,23 +94,27 @@ const Navbar = () => {
           <SheetContent>
             <SheetHeader>
               <SheetTitle className="pt-6 flex items-center justify-center">
-                <Link href={"/"}>
+                <a href="#home" onClick={(e) => handleScroll(e, "#home")}>
                   <Image
                     src={"/opurbo.jpg"}
                     alt={"logo"}
                     width={200}
                     height={100}
                   />
-                </Link>
+                </a>
               </SheetTitle>
 
               <SheetDescription>
                 <Menubar className="flex flex-col border-none ">
                   {menu.map((item, idx) => (
                     <MenubarMenu key={idx}>
-                      <Link href={item.path} className="py-2">
+                      <a
+                        href={item.target}
+                        onClick={(e) => handleScroll(e, item.target)}
+                        className="py-2"
+                      >
                         <MenubarTrigger>{item.title}</MenubarTrigger>
-                      </Link>
+                      </a>
                     </MenubarMenu>
                   ))}
                   <span>
