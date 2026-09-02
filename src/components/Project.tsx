@@ -235,7 +235,7 @@ const Project: React.FC = () => {
                     </p>
                   )}
                 </CardHeader>
-                <div className="flex justify-center gap-3 my-4 mx-2">
+                <div className="flex justify-end gap-3 my-4 mx-2">
                   {item.git && (
                     <Link
                       href={item.git}
