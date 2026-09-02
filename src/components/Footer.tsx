@@ -26,13 +26,13 @@ const Footer = () => {
         <div className="flex flex-col justify-center items-center space-y-4 text-sm">
           <div className="flex justify-center items-center space-x-4 tracking-[0.2rem]">
             <div className="text-center">
-              Opu Pal | opupal07@gmail.com | +8801920172104{" "}
+              Opu Pal | opu.pal.dev@gmail.com | Nottingham, UK{" "}
             </div>
           </div>
           <Separator className="w-3/4 mx-auto" />
           <div className="text-center">
             <h4 className="text-sm font-medium leading-none flex justify-center items-center">
-              <Copyright /> All Rights Reserved to Opu Pal - 2024
+              <Copyright /> All Rights Reserved to Opu Pal - 2026
             </h4>
           </div>
         </div>
