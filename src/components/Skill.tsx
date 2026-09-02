@@ -1,35 +1,39 @@
-import { CheckCircle, Code2, DatabaseZap } from "lucide-react";
+import { CheckCircle, Code2, DatabaseZap, ServerCog, Wrench } from "lucide-react";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
+const frontend = [
+  "React.js",
+  "Next.js",
+  "Tailwind CSS",
+  "Bootstrap",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+];
+
+const backend = [
+  "Node.js",
+  "Express.js",
+  "Next.js API Routes",
+  "Next.js Server Actions",
+  "NestJS",
+];
+
+const databases = ["MongoDB", "MySQL", "PostgreSQL", "SQLite", "Redis"];
+
+const tools = [
+  "Electron",
+  "WebSocket",
+  "NextAuth",
+  "Prisma",
+  "REST APIs",
+  "CI/CD",
+  "Docker",
+  "Offline-first & multi-tenant app design",
+];
+
 const Skill = () => {
-  const fontEnd = [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Material UI",
-    "Shadcn UI",
-    "Tailwind CSS",
-    "Bootstrap",
-    "Aceternity UI",
-    "Vue.js",
-  ];
-  const backEnd = [
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "MySQL",
-    "PostgreSQL",
-    "Prisma ORM",
-    "Sanity",
-    "Stripe",
-    "PHP",
-    "Python",
-    "Electron",
-    "Git",
-  ];
   return (
     <section className="h-full sm:h-[40rem] py-8">
       <div>
@@ -37,42 +41,70 @@ const Skill = () => {
           SKILLS
         </h2>
       </div>
-      <div className=" flex items-center justify-center sm:flex-row flex-col gap-4  ">
-        <div>
-          <Card className="w-[20rem] sm:w-[30rem]">
-            <CardHeader>
-              <CardTitle className="flex items-center justify-center gap-4 ">
-                <Code2 /> Front-End
-              </CardTitle>
-              <CardDescription className="grid sm:grid-cols-3 grid-cols-2 gap-8 py-4">
-                {fontEnd.map((skill, index) => (
-                  <span key={index} className="flex gap-2">
-                    <CheckCircle />
-                    {skill}
-                  </span>
-                ))}
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
-        <div>
-          <Card className="w-[20rem] sm:w-[30rem]">
-            <CardHeader>
-              <CardTitle className="flex items-center justify-center gap-4">
-                <DatabaseZap />
-                <span className=""> Back-End</span>
-              </CardTitle>
-              <CardDescription className="grid sm:grid-cols-3 grid-cols-2 gap-8 py-4">
-                {backEnd.map((skill, idx) => (
-                  <span key={idx} className="flex gap-2">
-                    <CheckCircle />
-                    {skill}
-                  </span>
-                ))}
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
+      <div className="flex items-center justify-center flex-col gap-4 px-4">
+        <Card className="w-[20rem] sm:w-[28rem]">
+          <CardHeader>
+            <CardTitle className="flex items-center justify-center gap-2">
+              <Code2 className="h-5 w-5" /> Frontend
+            </CardTitle>
+            <CardDescription className="grid sm:grid-cols-2 grid-cols-1 gap-3 py-4">
+              {frontend.map((skill, index) => (
+                <span key={index} className="flex gap-2 items-center">
+                  <CheckCircle className="h-4 w-4 shrink-0" />
+                  {skill}
+                </span>
+              ))}
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <Card className="w-[20rem] sm:w-[28rem]">
+          <CardHeader>
+            <CardTitle className="flex items-center justify-center gap-2">
+              <ServerCog className="h-5 w-5" /> Backend
+            </CardTitle>
+            <CardDescription className="grid sm:grid-cols-2 grid-cols-1 gap-3 py-4">
+              {backend.map((skill, idx) => (
+                <span key={idx} className="flex gap-2 items-center">
+                  <CheckCircle className="h-4 w-4 shrink-0" />
+                  {skill}
+                </span>
+              ))}
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <Card className="w-[20rem] sm:w-[28rem]">
+          <CardHeader>
+            <CardTitle className="flex items-center justify-center gap-2">
+              <DatabaseZap className="h-5 w-5" /> Databases
+            </CardTitle>
+            <CardDescription className="grid sm:grid-cols-2 grid-cols-1 gap-3 py-4">
+              {databases.map((skill, idx) => (
+                <span key={idx} className="flex gap-2 items-center">
+                  <CheckCircle className="h-4 w-4 shrink-0" />
+                  {skill}
+                </span>
+              ))}
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <Card className="w-[20rem] sm:w-[28rem]">
+          <CardHeader>
+            <CardTitle className="flex items-center justify-center gap-2">
+              <Wrench className="h-5 w-5" /> Tools & Practices
+            </CardTitle>
+            <CardDescription className="grid sm:grid-cols-2 grid-cols-1 gap-3 py-4">
+              {tools.map((skill, idx) => (
+                <span key={idx} className="flex gap-2 items-center">
+                  <CheckCircle className="h-4 w-4 shrink-0" />
+                  {skill}
+                </span>
+              ))}
+            </CardDescription>
+          </CardHeader>
+        </Card>
       </div>
     </section>
   );
