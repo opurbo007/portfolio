@@ -1,6 +1,5 @@
 "use client";
 import { Briefcase, Github, Linkedin } from "lucide-react";
-import Image from "next/image";
 import { Toggle } from "./ui/toggle";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
@@ -33,16 +32,6 @@ export function HeroSection() {
   ];
   return (
     <div className="flex flex-col items-center justify-center h-[35rem] sm:h-[51.2rem]  ">
-      <div className="relative mb-6">
-        <Image
-          src={"/avatar.jpg"}
-          alt="Opu Pal"
-          width={140}
-          height={140}
-          className="rounded-full border-4 border-black dark:border-white object-cover h-32 w-32 sm:h-36 sm:w-36"
-        />
-        <span className="absolute bottom-1 right-1 h-4 w-4 rounded-full bg-green-500 border-2 border-white dark:border-black" />
-      </div>
       <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
         {`"Welcome to showcase, where innovation meets creativity."`}
       </p>
