@@ -163,7 +163,8 @@ export default function ChatBot() {
         const data = await res.json();
 
         if (!res.ok) {
-          throw new Error(data.error || "Failed to get response");
+          console.error("Chat API error:", data);
+          throw new Error(data.error || `Failed with status ${res.status}`);
         }
 
         setMessages((prev) => [
@@ -172,12 +173,14 @@ export default function ChatBot() {
         ]);
       } catch (err) {
         if (err instanceof DOMException && err.name === "AbortError") return;
+        const message =
+          err instanceof Error ? err.message : "Unknown error";
+        console.error("Chat error:", message);
         setMessages((prev) => [
           ...prev,
           {
             role: "assistant",
-            content:
-              "Hmm, something went wrong. Could you try sending that again?",
+            content: `Hmm, something went wrong. Could you try sending that again?\n\n*Error: ${message}*`,
           },
         ]);
       } finally {

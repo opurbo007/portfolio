@@ -27,7 +27,7 @@ async function callGroq(
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "llama-3.1-8b-instant",
+        model: "llama-3.3-70b-versatile",
         messages,
         temperature: 0.7,
         max_tokens: 600,
@@ -41,7 +41,9 @@ async function callGroq(
 
     if (!res.ok) {
       const errorBody = await res.text();
+      console.error(`Groq API ${res.status}:`, errorBody);
       lastError = `Groq API error ${res.status}: ${errorBody}`;
+      if (res.status !== 429) break;
       continue;
     }
 
