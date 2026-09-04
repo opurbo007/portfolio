@@ -40,7 +40,7 @@ const allProjects: ProjectType[] = [
     name: "Okra Derby",
     description: "Next.js Tailwind TypeScript",
     git: "",
-    live: "https://okracfw.mytechys.co.uk/",
+    live: "",
     imagePath: "/temp/project23.png",
     isPrivate: true,
   },
