@@ -33,7 +33,14 @@ export const skills: Skill[] = [
     category: "Frontend",
     description:
       "Building complex UIs with hooks, context API, custom hooks, and component composition. Experienced with state management patterns and performance optimization.",
-    usedIn: ["Finance Tracker", "ShowBox", "Qoo-Media", "me&u (Cook together)", "EventX", "Website Speed Tester"],
+    usedIn: [
+      "Finance Tracker",
+      "ShowBox",
+      "Qoo-Media",
+      "me&u (Cook together)",
+      "EventX",
+      "Website Speed Tester",
+    ],
   },
   {
     name: "Next.js",
@@ -41,7 +48,18 @@ export const skills: Skill[] = [
     category: "Frontend",
     description:
       "Full-stack React framework using App Router, Server Components, API routes, SSR/SSG, middleware, and file-based routing. My go-to for production apps.",
-    usedIn: ["Bond Wallet", "Remote Office Manager", "Daily Task", "Finance Tracker", "Drive Academy", "Haven Store", "Portfolio", "Techys Retail & IT", "Wheelline", "Okra Derby"],
+    usedIn: [
+      "Bond Wallet",
+      "Remote Office Manager",
+      "Daily Task",
+      "Finance Tracker",
+      "Drive Academy",
+      "Haven Store",
+      "Portfolio",
+      "Techys Retail & IT",
+      "Wheelline",
+      "Okra Derby",
+    ],
   },
   {
     name: "Node.js",
@@ -49,7 +67,12 @@ export const skills: Skill[] = [
     category: "Backend",
     description:
       "Server-side JavaScript runtime for building REST APIs, real-time apps, and microservices. Comfortable with event-driven architecture and async patterns.",
-    usedIn: ["Remote Office Manager", "Daily Task", "Finance Tracker", "Haven Store"],
+    usedIn: [
+      "Remote Office Manager",
+      "Daily Task",
+      "Finance Tracker",
+      "Haven Store",
+    ],
   },
   {
     name: "Express",
@@ -65,7 +88,16 @@ export const skills: Skill[] = [
     category: "Language",
     description:
       "Type-safe JavaScript for scalable applications. Used for defining interfaces, generics, enums, and ensuring code quality across frontend and backend.",
-    usedIn: ["Bond Wallet", "Remote Office Manager", "Daily Task", "Haven Store", "me&u (Cook together)", "Techys Retail & IT", "Wheelline", "Okra Derby"],
+    usedIn: [
+      "Bond Wallet",
+      "Remote Office Manager",
+      "Daily Task",
+      "Haven Store",
+      "me&u (Cook together)",
+      "Techys Retail & IT",
+      "Wheelline",
+      "Okra Derby",
+    ],
   },
   {
     name: "MongoDB",
@@ -113,7 +145,14 @@ export const skills: Skill[] = [
     category: "Backend",
     description:
       "Server-side scripting for web applications. Experience with form handling, database integration, and traditional web development.",
-    usedIn: ["Routine Management", "Leisure Life", "Amar Fosol", "Pure Fashion", "Student Portal", "Be Green"],
+    usedIn: [
+      "Routine Management",
+      "Leisure Life",
+      "Amar Fosol",
+      "Pure Fashion",
+      "Student Portal",
+      "Be Green",
+    ],
   },
   {
     name: "Python",
@@ -132,7 +171,8 @@ export const projects: Project[] = [
       "Professional retail and IT services website for Techys, featuring a modern landing page, service showcases, and responsive design.",
     tech: ["Next.js", "Tailwind CSS", "TypeScript"],
     liveUrl: "https://www.mytechys.co.uk/retail",
-    highlights: "Client-facing business website with polished UI and performance.",
+    highlights:
+      "Client-facing business website with polished UI and performance.",
   },
   {
     title: "Wheelline",
@@ -140,14 +180,14 @@ export const projects: Project[] = [
       "Wheelchair accessories and mobility solutions e-commerce website with product catalog and responsive layout.",
     tech: ["Next.js", "Tailwind CSS", "TypeScript"],
     liveUrl: "https://www.wheelline.co.uk/",
-    highlights: "E-commerce platform focused on accessibility and mobility products.",
+    highlights:
+      "E-commerce platform focused on accessibility and mobility products.",
   },
   {
     title: "Okra Derby",
     description:
       "Okra restaurant website with online ordering system, menu browsing, and reservation features.",
     tech: ["Next.js", "Tailwind CSS", "TypeScript"],
-    liveUrl: "https://okracfw.mytechys.co.uk/",
     highlights: "Full restaurant web app with online ordering capabilities.",
   },
   {
